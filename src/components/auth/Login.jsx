@@ -128,9 +128,6 @@ const Login = () => {
             <div className="button-signup">
               <p className="button-text-signup">Registrarse</p>
             </div>
-            <Button size="medium" className={classes.margin}>
-                Crear Cuenta
-            </Button>
           </Link>
         </div>
       </div>

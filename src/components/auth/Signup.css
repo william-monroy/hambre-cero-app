@@ -1,5 +1,4 @@
-.signup
-{
+.signup {
     background-color: #1F2E35;
     position: relative;
     z-index: 10;
@@ -7,68 +6,82 @@
     height: 100vh;
 
 }
-.form{
+
+.form {
     margin: 0 auto;
     position: fixed;
 }
-.reg{
+
+.reg {
     font-size: 70px;
     color: rgb(236, 236, 236);
 }
-.navbar-logo{
+
+.navbar-logo {
     border-radius: 30px;
 }
-.form-der{
+
+.form-der {
     margin-right: 8px;
-    width: 300px; 
+    width: 300px;
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .form-txt {
     color: #8b989e;
     font-size: 30px;
-    
+
 }
-.input-apellidos, .apellido-basic{
+
+.input-apellidos,
+.apellido-basic {
     width: 300px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
-   
+
 }
-.input-Email, .email-basic {
-    width: 300px;
-    margin-bottom: 30px;
-    background-color: #dadada;
-    border-radius: 30px;
-}
-.input-confirm, .confirm-basic {
+
+.input-Email,
+.email-basic {
     width: 300px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
 }
 
-.form-colf{
+.input-confirm,
+.confirm-basic {
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #dadada;
+    border-radius: 30px;
+}
+
+.form-colf {
     margin-right: 8px;
     margin-top: 30px;
-    width: 300px; 
+    width: 300px;
 }
-.nombre_comp{
+
+.nombre_comp {
     width: 300px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
 }
-.select-sexo{
+
+.select-sexo {
     width: 300px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
 }
-.contrasenia{
+
+.contrasenia {
     width: 300px;
     margin-bottom: 30px;
     background-color: #dadada;
