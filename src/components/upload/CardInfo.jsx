@@ -31,13 +31,13 @@ const CardInfo = ({ data }) => {
                 <Grid item>
                   <List>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Precio Sugerido:{" "}
                         <strong>${data.suggested_price}</strong>
                       </span>
                     </ListItem>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Estado:{" "}
                         <strong>
                           {data.status.charAt(0).toUpperCase() +
@@ -46,18 +46,18 @@ const CardInfo = ({ data }) => {
                       </span>
                     </ListItem>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Vencimiento: <strong>{data.expiration} días</strong>
                       </span>
                     </ListItem>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Disancia Viable:{" "}
                         <strong>{data.viable_distance} KM</strong>
                       </span>
                     </ListItem>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Proveedores cercanos:{" "}
                         <strong>{data.nearby_providers}</strong>
                       </span>
@@ -67,22 +67,22 @@ const CardInfo = ({ data }) => {
                 <Grid item>
                   <List>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Donable: <strong>{data.donatable ? "Sí" : "No"}</strong>
                       </span>
                     </ListItem>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Vendible: <strong>{data.salable ? "Sí" : "No"}</strong>
                       </span>
                     </ListItem>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Precisión: <strong>{data.precision}%</strong>
                       </span>
                     </ListItem>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Entidad:{" "}
                         <strong>
                           {data.entity.charAt(0).toUpperCase() +
@@ -91,7 +91,7 @@ const CardInfo = ({ data }) => {
                       </span>
                     </ListItem>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         Categoria:{" "}
                         <strong>
                           {data.category.charAt(0).toUpperCase() +
@@ -100,7 +100,7 @@ const CardInfo = ({ data }) => {
                       </span>
                     </ListItem>
                     <ListItem>
-                      <span class="item">
+                      <span className="item">
                         # de lote: <strong>{data.lote}</strong>
                       </span>
                     </ListItem>

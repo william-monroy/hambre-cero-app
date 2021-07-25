@@ -38,8 +38,8 @@ const headers = [
 
 const Results = () => {
   return (
-    <Container>
-      <TopBar link="/dashboard" />
+    <Container maxWidth="md">
+      <TopBar link="/dashboard" backPosition="left" avatarPosition="right" back={true} avatar={true} />
       <Card>
         <Typography className="results__title" variant="subtitle1" component="h3">
           PRODUCTOS

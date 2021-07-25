@@ -65,7 +65,7 @@ const Login = () => {
         <div className="navbar-item">
           <div className="square"></div>
           <h2 className="navbar-txt">
-            Bienenido!
+            Bienvenido!
           </h2>
         </div>
         <div className="navbar-item">
