@@ -7,21 +7,21 @@
     font-size: 180px;
     position: absolute;
     z-index: 3;
-    right: 270px;
+    left: 0;
 }
 
 .card-content{
-    position: absolute;
-    background-color: #25C685;
-    z-index: 2;
-    width: 350px;
-    height: 250px;
-    border-radius: 50px;
-    margin-top: 200px;
-    margin-left:0px;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: #25C685;
+    border-radius: 50px;
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    margin-left:0px;
+    margin-top: 200px;
+    position: relative;
+    width: 450px;
+    z-index: 2;
 }
 
 .card-txt{
@@ -33,12 +33,13 @@
 }
 
 .card-shadow{
-    position: absolute;
     background-color: #286053;
-    z-index: 1;
-    width: 350px;
-    height: 250px;
     border-radius: 50px;
-    margin-top: 235px;
+    height: 250px;
     margin-left: 25px;
+    position: absolute;
+    top: 220px;
+    width: 450px;
+    z-index: 1;
 }
+
