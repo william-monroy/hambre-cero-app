@@ -2,8 +2,8 @@
     background-color: #1F2E35;
     position: relative;
     z-index: 10;
-    width: 100%;
     height: 100vh;
+    padding-right: ;
 }
 
 h1{
@@ -19,5 +19,11 @@ h1{
 h1::selection{
     background-color: #286053;
     color: #fff;
+}
+
+.cards-container {
+    padding-left: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
