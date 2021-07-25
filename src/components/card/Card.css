@@ -5,9 +5,11 @@
 .num{
     color: #286053;
     font-size: 180px;
+    left: 0px;
+    padding-left: 0;
+    padding-right: 0;
     position: absolute;
     z-index: 3;
-    left: 0;
 }
 
 .card-content{
