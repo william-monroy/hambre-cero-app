@@ -1,3 +1,61 @@
 .getStarted{
-    background-color: lightcoral;
+    background-color: #1F2E35;
+    color: #3ED79A;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+}
+
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.front{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.waves{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    bottom: 0;
+}
+
+.front h1{
+    font-size: 100px;
+    font-weight: 700;
+
+}
+
+
+.button{
+    width: 260px;
+    height: 80px;
+    border: 2px solid #25C685;
+    border-radius: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-text{
+    margin: 0;
+    padding: 0;
+    color: #25C685;
+    font-weight: 700;
+}
+
+.txt-desc{
+    color: #25C685;
 }
