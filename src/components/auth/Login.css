@@ -1,4 +1,4 @@
-.login{
+.login {
     background-color: #1F2E35;
     position: relative;
     z-index: 10;
@@ -6,38 +6,119 @@
     height: 100vh;
 }
 
-.navbar{
+.navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
-h2{
+.square {
+    width: 50px;
+    height: 50px;
+    background-color: #3FDA9C;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+h2 {
     font-size: 70px;
     color: #fff;
+    margin-left: 30px;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 380px;
+    /* background-color: #305363; */
+    border-radius: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
 
 }
 
-.form{
-    margin: 0 auto;
-    margin-top: 80px;
-    width: 800px;
-    background-color: #305363;
-    border-radius: 30px;
+.form-content{
+
 }
 
 .form-txt {
     color: #96A7AF;
     font-size: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
 }
 
-.input-email, .input-password {
+.input-email,
+.input-password {
     display: flex;
-    align-items: center;
-    justify-content: center;
+
+
     margin-top: 20px;
 }
 
-.input-email img, .input-password img{
+.input-email img,
+.input-password img {
     width: 60px;
+    margin-right: 30px;
+}
+
+.form-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.button-signin{
+    width: 380px;
+    height: 70px;
+    background-color: #25C685;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-text-signin{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.forgot-txt-signin{
+    font-size: 15px;
+
+}
+
+.button-signup{
+    width: 380px;
+    height: 70px;
+    background-color: #286053;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-text-signup{
+    margin: 0;
+    padding: 0;
+    color: #3DD598;
+    font-size: 20px;
+    font-weight: 500;
 }
