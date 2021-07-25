@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Avatar, Button, Container, Grid, Box } from "@material-ui/core";
+import { Button, Container, Grid, Box } from "@material-ui/core";
 import TopBar from "../top_bar/TopBar";
 import CardInfo from "./CardInfo";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
@@ -17,18 +17,8 @@ const Upload = () => {
   };
 
   return (
-    <Container>
-      <Box my={2}>
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <TopBar link="/dashboard" />
-          <Avatar alt="Luis Cruz" src="/static/images/avatar/3.jpg" />
-        </Grid>
-      </Box>
+    <Container maxWidth="md">
+      <TopBar link="/dashboard" backPosition="left" avatarPosition="right" back={true} avatar={true} />
 
       <Grid
         container

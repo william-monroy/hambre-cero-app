@@ -8,7 +8,7 @@ import TopBar from "../top_bar/TopBar";
 const Dashboard = () => {
   return (
     <Container maxWidth="md">
-      <TopBar link="#" />
+      <TopBar link="/dashboard" logoPosition="left" avatarPosition="right" logo={true} avatar={true} />
       <BoxContainer />
       <Grid
         className="dashboard_box__container"
