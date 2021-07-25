@@ -1,11 +1,12 @@
-import React from 'react'
-
+import React from "react";
+import { Container } from "@material-ui/core";
+import TopBar from "../top_bar/TopBar";
 const Results = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <Container>
+      <TopBar link="/dashboard" />
+    </Container>
+  );
+};
 
-export default Results
+export default Results;
