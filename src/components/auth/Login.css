@@ -9,12 +9,35 @@
 .navbar{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 h2{
-    padding-left: 50px;
-    padding-top: 30px;
     font-size: 70px;
     color: #fff;
 
+}
+
+.form{
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 800px;
+    background-color: #305363;
+    border-radius: 30px;
+}
+
+.form-txt {
+    color: #96A7AF;
+    font-size: 30px;
+}
+
+.input-email, .input-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.input-email img, .input-password img{
+    width: 60px;
 }
