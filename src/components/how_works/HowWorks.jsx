@@ -1,8 +1,9 @@
 import React from 'react'
+import './HowWorks.css'
 
 const HowWorks = () => {
     return (
-        <div>
+        <div className="howWorks">
             
         </div>
     )
