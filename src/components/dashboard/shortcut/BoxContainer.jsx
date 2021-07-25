@@ -9,7 +9,7 @@ const boxes = [
     title: "Mis productos",
     logo: "./assets/product_icon.png",
     total: 360,
-    href: "#",
+    href: "/products",
     format: (v) => v,
   },
   {
@@ -36,7 +36,7 @@ const boxes = [
     title: "Categorias",
     logo: "./assets/category_icon.png",
     total: 21,
-    href: "#",
+    href: "/categories",
     format: (v) => v,
   },
   {
