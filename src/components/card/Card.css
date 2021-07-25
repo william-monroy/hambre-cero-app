@@ -1,0 +1,43 @@
+.card{
+    position: relative;
+}
+
+.num{
+    color: #286053;
+    font-size: 180px;
+    position: absolute;
+    z-index: 3;
+}
+
+.card-content{
+    position: absolute;
+    background-color: #25C685;
+    z-index: 2;
+    width: 450px;
+    height: 250px;
+    border-radius: 50px;
+    margin-top: 200px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-txt{
+    color: #fff;
+    font-size: 20px;
+    z-index: 1;
+    font-size: 30px;
+    text-align: center;
+}
+
+.card-shadow{
+    position: absolute;
+    background-color: #286053;
+    z-index: 1;
+    width: 450px;
+    height: 250px;
+    border-radius: 50px;
+    margin-top: 235px;
+    margin-left: 105px;
+}
