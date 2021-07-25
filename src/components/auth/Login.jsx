@@ -28,6 +28,9 @@ const Login = () => {
                     <img src="assets/eye.png" alt="icon-eye" />
                 </div>
             </div>
+            <Button size="medium" className={classes.margin}>
+                Crear Cuenta
+            </Button>
         </div>
     )
 }
