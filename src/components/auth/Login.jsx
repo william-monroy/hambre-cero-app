@@ -68,7 +68,9 @@ const Login = () => {
           </h2>
         </div>
         <div className="navbar-item">
-          <img src="assets/logo-frame.png" alt="logo-frame" className="navbar-logo" />
+          <Link to="/">
+            <img src="assets/logo-frame.png" alt="logo-frame" className="navbar-logo" />
+          </Link>
         </div>
       </div>
       <div className="form">
