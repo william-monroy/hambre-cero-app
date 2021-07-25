@@ -1,0 +1,44 @@
+.howWorks{
+    background-color: #1F2E35;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+h1{
+    color: #3ED79A;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+h1::selection{
+    background-color: #286053;
+    color: #fff;
+}
+
+.cards-container { 
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .howWorks {
+        height: 100%;
+        z-index: 20;
+        padding-bottom: 80px;
+    }
+
+} 

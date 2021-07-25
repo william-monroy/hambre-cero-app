@@ -1,0 +1,27 @@
+.dashboard_box__item {
+  background: #ffbc25;
+  width: 280px;
+  height: 180px;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 25px!important;
+}
+
+.dashboard_box__img {
+    width: 65px;
+  }
+
+.dashboard_box__title {
+  color: #9B741B;
+}
+
+.dashboard_box__qty{
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.dashboard_item__container{
+    width: 70%;
+    margin-top: 15px;
+}

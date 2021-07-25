@@ -1,0 +1,47 @@
+.card{
+    position: relative;
+}
+
+.num{
+    color: #286053;
+    font-size: 180px;
+    left: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    position: absolute;
+    z-index: 3;
+}
+
+.card-content{
+    align-items: center;
+    background-color: #25C685;
+    border-radius: 50px;
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    margin-left:0px;
+    margin-top: 200px;
+    position: relative;
+    width: 450px;
+    z-index: 2;
+}
+
+.card-txt{
+    color: #fff;
+    font-size: 20px;
+    z-index: 1;
+    font-size: 30px;
+    text-align: center;
+}
+
+.card-shadow{
+    background-color: #286053;
+    border-radius: 50px;
+    height: 250px;
+    margin-left: 25px;
+    position: absolute;
+    top: 220px;
+    width: 450px;
+    z-index: 1;
+}
+
