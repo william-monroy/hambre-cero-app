@@ -1,3 +1,47 @@
 .aboutUs{
-    background-color: coral;
+    /* background-color: coral; */
+    background-color: #1F2E35;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+}
+
+h1{
+    color: #3ED79A;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+h1::selection{
+    background-color: #286053;
+    color: #fff;
+}
+
+p{
+    color: #25C685;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 25px;
+    font-weight: 400;    
+    text-align: justify;
+}
+
+p::selection{
+    background-color: #286053;
+    color: #fff;
+}
+
+.images{
+    background-color: #286053;
+    width: 900px;
+    height: 550px;
+    border-radius: 30px;
+    margin: 0 auto;
 }
