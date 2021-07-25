@@ -39,6 +39,7 @@ h2 {
     width: 380px;
     /* background-color: #305363; */
     border-radius: 30px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;

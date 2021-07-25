@@ -1,0 +1,76 @@
+.signup
+{
+    background-color: #1F2E35;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+
+}
+.form{
+    margin: 0 auto;
+    position: fixed;
+}
+.reg{
+    font-size: 70px;
+    color: rgb(236, 236, 236);
+}
+.navbar-logo{
+    border-radius: 30px;
+}
+.form-der{
+    margin-right: 8px;
+    width: 300px; 
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-txt {
+    color: #8b989e;
+    font-size: 30px;
+    
+}
+.input-apellidos, .apellido-basic{
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #dadada;
+    border-radius: 30px;
+   
+}
+.input-Email, .email-basic {
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #dadada;
+    border-radius: 30px;
+}
+.input-confirm, .confirm-basic {
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #dadada;
+    border-radius: 30px;
+}
+
+.form-colf{
+    margin-right: 8px;
+    margin-top: 30px;
+    width: 300px; 
+}
+.nombre_comp{
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #dadada;
+    border-radius: 30px;
+}
+.select-sexo{
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #dadada;
+    border-radius: 30px;
+}
+.contrasenia{
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #dadada;
+    border-radius: 30px;
+}

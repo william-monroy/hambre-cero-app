@@ -13,6 +13,7 @@ import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -127,6 +128,9 @@ const Login = () => {
             <div className="button-signup">
               <p className="button-text-signup">Registrarse</p>
             </div>
+            <Button size="medium" className={classes.margin}>
+                Crear Cuenta
+            </Button>
           </Link>
         </div>
       </div>
