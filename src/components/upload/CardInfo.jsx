@@ -1,20 +1,6 @@
 import { Card, CardContent, Container, Grid, Box, ListItem, List } from "@material-ui/core";
 import { VALID_STATES } from "../../js/constants"
 
-const demo = {
-  suggested_price: 3.3,
-  status: "excelente",
-  expiration: 4,
-  viable_distance: 30,
-  nearby_providers: 5,
-  donatable: true,
-  salable: true,
-  precision: 97,
-  entity: "banana",
-  category: "fruta",
-  lote: 234467,
-};
-
 const CardInfo = ({ data }) => {
   return (
     <Container maxWidth="md">
