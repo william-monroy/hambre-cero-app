@@ -1,4 +1,3 @@
-import './Login.css';
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -15,6 +14,7 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
+import './Login.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {

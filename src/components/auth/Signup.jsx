@@ -3,6 +3,7 @@ import './Signup.css';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+import { Link } from "react-router-dom";
 
 const currencies = [
     {
@@ -29,7 +30,9 @@ const Signup = () => {
         <div className="signup">
             <div className="navbar">
                 <h2 className="reg">REGISTRO</h2>
-                <img src="assets/logo-frame.png" alt="logo-frame" className="navbar-logo" />
+                <Link to="/">
+                    <img src="assets/logo-frame.png" alt="logo-frame" className="navbar-logo" />
+                </Link>
             </div>
             <p>Complete el siguiente formulario para registrarse en el sistema</p>
 
@@ -75,7 +78,11 @@ const Signup = () => {
                     </div>
                 </div>
             </div>
-
+            <Link to="/dashboard">
+            <div className="button-signin">
+              <p className="button-text-signin">Registrarse</p>
+            </div>
+          </Link>
 
         </div>
 

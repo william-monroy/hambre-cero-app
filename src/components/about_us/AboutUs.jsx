@@ -5,7 +5,7 @@ const AboutUs = () => {
     return (
         <div className="aboutUs">
             <h1>Acerca de</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde fugit consequuntur, natus temporibus error quidem repellat odit minima, quam alias accusantium deleniti necessitatibus delectus soluta! Repellat beatae voluptatum ut eum?</p>
+            <p>Nuestro servicio, consiste en ofrecer todo el potencial de la Inteligencia Artificial para determinar la calidad de un producto consumible a toda la cadena de suministro.</p>
             <div className="images">
 
             </div>

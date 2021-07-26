@@ -9,7 +9,7 @@
 
 .form {
     margin: 0 auto;
-    position: fixed;
+    
 }
 
 .reg {
@@ -86,4 +86,23 @@
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
+}
+
+.button-signin{
+    margin: 0 auto;
+    width: 380px;
+    height: 70px;
+    background-color: #25C685;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-text-signin{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
 }
