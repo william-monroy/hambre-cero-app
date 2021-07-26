@@ -48,10 +48,6 @@ h2 {
 
 }
 
-.form-content{
-
-}
-
 .form-txt {
     color: #96A7AF;
     font-size: 30px;
@@ -63,8 +59,6 @@ h2 {
 .input-email,
 .input-password {
     display: flex;
-
-
     margin-top: 20px;
 }
 
@@ -102,7 +96,6 @@ h2 {
 
 .forgot-txt-signin{
     font-size: 15px;
-
 }
 
 .button-signup{
