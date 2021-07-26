@@ -30,6 +30,24 @@ export default class Product{
         }
     }
 
+    createData(id, name, batch, date, state) {
+        return {
+          id,
+          data: [
+            { value: id, style: {}, align: "left" },
+            { value: name, style: {}, align: "left" },
+            { value: batch, style: { width: 60 }, align: "left" },
+            { value: date, style: { width: 160 }, align: "center" },
+            { value: VALID_STATES[state], style: { width: 100 }, align: "left" },
+            {
+              style: {},
+              align: "center",
+              config: { url: "/results", hasUrl: true },
+            },
+          ],
+        };
+      }
+
     async upload(file){
         this.api = new ApiWrapper("post");
         // TODO: change input to file
@@ -44,9 +62,14 @@ export default class Product{
     }
 
     async fetch(){
-        this.api = new ApiWrapper("get");
-        const result = await this.api.makeRequest(`/products`)
-        return {result}
+        let self = this
+        self.api = new ApiWrapper("get");
+        const result = await self.api.makeRequest(`/products`)
+        const data = result.data.rows.map( row => {
+            const { _id, entity, lote, createdAt, status } = row.doc
+            return self.createData(_id, entity, lote, createdAt, status)
+    })
+        return {data}
     }
 
     async get(id){
