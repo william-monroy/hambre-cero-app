@@ -4,17 +4,22 @@
     z-index: 10;
     width: 100%;
     height: 100vh;
-
 }
 
-.form {
+.form2 {
     margin: 0 auto;
-    position: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
 }
-
+p{
+    color:  rgb(236, 236, 236);
+}
 .reg {
     font-size: 70px;
-    color: rgb(236, 236, 236);
+    color: rgb(252, 238, 212);
+    margin-left: 80px;
 }
 
 .navbar-logo {
@@ -25,9 +30,7 @@
     margin-right: 8px;
     width: 300px;
     margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin-left: 80px;
 }
 
 .form-txt {
@@ -38,7 +41,7 @@
 
 .input-apellidos,
 .apellido-basic {
-    width: 300px;
+    width: 400px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
@@ -47,7 +50,7 @@
 
 .input-Email,
 .email-basic {
-    width: 300px;
+    width: 400px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
@@ -55,7 +58,7 @@
 
 .input-confirm,
 .confirm-basic {
-    width: 300px;
+    width: 400px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
@@ -64,26 +67,39 @@
 .form-colf {
     margin-right: 8px;
     margin-top: 30px;
-    width: 300px;
+    width: 400px;
 }
 
 .nombre_comp {
-    width: 300px;
+    width: 400px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
 }
 
 .select-sexo {
-    width: 300px;
+    width: 400px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
 }
 
 .contrasenia {
-    width: 300px;
+    width: 400px;
     margin-bottom: 30px;
     background-color: #dadada;
     border-radius: 30px;
+}
+.button-signup2{
+    width: 380px;
+    height: 70px;
+    background-color: #286053;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left:560px;
+    margin-top: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Signup.css';
 import TextField from '@material-ui/core/TextField';
+import { Link } from "react-router-dom";
+import { makeStyles } from '@material-ui/core/styles';
 
 const currencies = [
     {
@@ -22,6 +24,14 @@ const Signup = () => {
     const handleChange = (event) => {
         setCurrency(event.target.value);
     };
+    const useStyles = makeStyles((theme) => ({
+        root: {
+          '& > *': {
+            margin: theme.spacing(1),
+            width: '400px',
+          },
+        },
+      }));
 
     return (
         <div className="signup">
@@ -30,9 +40,7 @@ const Signup = () => {
                 <img src="assets/logo-frame.png" alt="logo-frame" className="navbar-logo" />
             </div>
             <p>Complete el siguiente formulario para registrarse en el sistema</p>
-
-            <div className="form" align="center">
-
+            <div className="form2">
                 <div className="form-colf" >
                     <div className="nombre_comp">
                         <TextField id="nombres" label="Nombres completos" variant="outlined" />
@@ -73,8 +81,11 @@ const Signup = () => {
                     </div>
                 </div>
             </div>
-
-
+            <Link to="/signup">
+                <div className="button-signup2">
+                <p className="button-text-signup">Crear cuenta</p>
+                </div>
+            </Link>
         </div>
 
 
