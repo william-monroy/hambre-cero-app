@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Avatar, Grid } from "@material-ui/core";
 import Back from "./Back";
+import { APP_LOGO } from '../../js/constants'
 import "./TopBar.css";
 
 const TopBar = ({
@@ -14,7 +15,7 @@ const TopBar = ({
 }) => {
   const componentBack = (<Back link={link} align={backPosition} />);
   const componentLogo = (
-    <img src="assets/logo-frame.png" alt="logo-frame" className="navbar-logo" align={logoPosition} />
+    <img src={ APP_LOGO } alt="dmetr-logo" className="navbar-logo" align={logoPosition} />
   );
   const componentAvatar = (
     <Avatar alt="Luis Cruz" src="/static/images/avatar/3.jpg" align={avatarPosition} />

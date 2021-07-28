@@ -1,6 +1,7 @@
 import React from 'react';
 import './Signup.css';
 import TextField from '@material-ui/core/TextField';
+import { APP_LOGO } from '../../js/constants'
 import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -38,7 +39,7 @@ const Signup = () => {
             <div className="navbar">
                 <h2 className="reg">REGISTRO</h2>
                 <Link to="/">
-                    <img src="assets/logo-frame.png" alt="logo-frame" className="navbar-logo" />
+                    <img src={ APP_LOGO } alt="logo-dmetr" className="navbar-logo" />
                 </Link>
             </div>
             <p>Complete el siguiente formulario para registrarse en el sistema</p>
