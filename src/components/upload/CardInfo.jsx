@@ -1,21 +1,7 @@
 import { Card, CardContent, Container, Grid, Box, ListItem, List } from "@material-ui/core";
-
-const demo = {
-  suggested_price: 3.3,
-  status: "excelente",
-  expiration: 4,
-  viable_distance: 30,
-  nearby_providers: 5,
-  donatable: true,
-  salable: true,
-  precision: 97,
-  entity: "banana",
-  category: "fruta",
-  lote: 234467,
-};
+import { VALID_STATES } from "../../js/constants"
 
 const CardInfo = ({ data }) => {
-  data = demo;
   return (
     <Container maxWidth="md">
       <Grid>
@@ -33,15 +19,14 @@ const CardInfo = ({ data }) => {
                     <ListItem>
                       <span className="item">
                         Precio Sugerido:{" "}
-                        <strong>${data.suggested_price}</strong>
+                        <strong>${data.suggested_price.toFixed(2)}</strong>
                       </span>
                     </ListItem>
                     <ListItem>
                       <span className="item">
                         Estado:{" "}
                         <strong>
-                          {data.status.charAt(0).toUpperCase() +
-                            data.status.slice(1)}
+                          {VALID_STATES[data.status]}
                         </strong>
                       </span>
                     </ListItem>
@@ -53,7 +38,7 @@ const CardInfo = ({ data }) => {
                     <ListItem>
                       <span className="item">
                         Disancia Viable:{" "}
-                        <strong>{data.viable_distance} KM</strong>
+                        <strong>{data.viable_distance.toFixed(2)} KM</strong>
                       </span>
                     </ListItem>
                     <ListItem>
@@ -78,15 +63,14 @@ const CardInfo = ({ data }) => {
                     </ListItem>
                     <ListItem>
                       <span className="item">
-                        Precisión: <strong>{data.precision}%</strong>
+                        Precisión: <strong>{data.precision.toFixed(2)}%</strong>
                       </span>
                     </ListItem>
                     <ListItem>
                       <span className="item">
                         Entidad:{" "}
                         <strong>
-                          {data.entity.charAt(0).toUpperCase() +
-                            data.entity.slice(1)}
+                          {data.entity}
                         </strong>
                       </span>
                     </ListItem>
@@ -94,8 +78,7 @@ const CardInfo = ({ data }) => {
                       <span className="item">
                         Categoria:{" "}
                         <strong>
-                          {data.category.charAt(0).toUpperCase() +
-                            data.category.slice(1)}
+                          {data.category}
                         </strong>
                       </span>
                     </ListItem>

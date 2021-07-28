@@ -1,9 +1,8 @@
 import React from 'react';
 import './Signup.css';
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from "react-router-dom";
+import { makeStyles } from '@material-ui/core/styles';
 
 const currencies = [
     {
@@ -25,6 +24,14 @@ const Signup = () => {
     const handleChange = (event) => {
         setCurrency(event.target.value);
     };
+    const useStyles = makeStyles((theme) => ({
+        root: {
+          '& > *': {
+            margin: theme.spacing(1),
+            width: '400px',
+          },
+        },
+      }));
 
     return (
         <div className="signup">
@@ -35,9 +42,7 @@ const Signup = () => {
                 </Link>
             </div>
             <p>Complete el siguiente formulario para registrarse en el sistema</p>
-
-            <div className="form" align="center">
-
+            <div className="form2">
                 <div className="form-colf" >
                     <div className="nombre_comp">
                         <TextField id="nombres" label="Nombres completos" variant="outlined" />
@@ -78,12 +83,11 @@ const Signup = () => {
                     </div>
                 </div>
             </div>
-            <Link to="/dashboard">
-            <div className="button-signin">
-              <p className="button-text-signin">Registrarse</p>
-            </div>
-          </Link>
-
+            <Link to="/signup">
+                <div className="button-signup2">
+                <p className="button-text-signup">Crear cuenta</p>
+                </div>
+            </Link>
         </div>
 
 
