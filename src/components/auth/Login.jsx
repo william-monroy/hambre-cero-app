@@ -1,5 +1,18 @@
-import React from "react";
-import { APP_LOGO } from "../../js/constants";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom"
+import {
+  APP_LOGO,
+  LOGIN_INIT,
+  LOGIN_FAILED_CREDS,
+  LOGIN_POPUP,
+  LOGIN_CLICKED,
+} from "../../js/constants";
+import {
+  authUser,
+  startAuth,
+  initLogin,
+  onLoginButtonClick,
+} from "../../js/services/auth";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
@@ -12,6 +25,7 @@ import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,10 +44,29 @@ const useStyles = makeStyles((theme) => ({
   color: {
     color: theme.palette.text.primary,
   },
+  button: {
+    width: "380px",
+    height: "70px",
+    backgroundColor: "#25C685",
+    borderRadius: "5px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 }));
 
 const Login = () => {
   const classes = useStyles();
+  const history = useHistory()
+  const loginBtnDisabled = {
+    [LOGIN_INIT]: true,
+    [LOGIN_FAILED_CREDS]: true,
+    [LOGIN_POPUP]: false,
+    [LOGIN_CLICKED]: true,
+  };
+  const [loginState, setLoginState] = React.useState(LOGIN_INIT);
+  const [errorProviderMsg, setErrorProviderMsg] = React.useState("");
+  const [auth] = React.useState(startAuth());
   const [values, setValues] = React.useState({
     amount: "",
     password: "",
@@ -41,6 +74,34 @@ const Login = () => {
     weightRange: "",
     showPassword: false,
   });
+  useEffect(() => {
+    async function checkLogin() {
+      const s = await initLogin(auth);
+      if (s === LOGIN_FAILED_CREDS) {
+        setErrorProviderMsg("Error al conectar con servidor App ID");
+      }
+      setLoginState(s);
+    }
+    if (loginState === LOGIN_INIT) {
+      checkLogin()
+    }
+  }, [loginState, auth]);
+
+  const onStartButton = async (e) => {
+    if (loginState !== LOGIN_CLICKED){
+      setLoginState(LOGIN_CLICKED);
+      const {decodeIDToken, userInfo} = await onLoginButtonClick(auth);
+      //TODO: request API JWT here using userInfo or decodeIDToken
+      //save JWT + userInfo in db
+      console.log({decodeIDToken, userInfo})
+      const { user } = await authUser(userInfo);
+      if (user) {
+        history.push("/dashboard");
+      }
+      setLoginState(LOGIN_POPUP);
+
+    }
+  };
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
@@ -70,6 +131,7 @@ const Login = () => {
       <div className="form">
         <p className="form-txt">Inicia Sesión para continuar</p>
         <div className="form-content">
+          {errorProviderMsg}
           <div className="input-email">
             <img src="assets/icon-user.png" alt="icon-user" />
             <TextField id="standard-basic" label="E-mail" />
@@ -106,11 +168,14 @@ const Login = () => {
           </div>
         </div>
         <div className="form-bottom">
-          <Link to="/dashboard">
-            <div className="button-signin">
-              <p className="button-text-signin">Ingresar</p>
-            </div>
-          </Link>
+          <Button
+            className={classes.button}
+            onClick={onStartButton}
+            disabled={loginBtnDisabled[loginState]}
+            value="Iniciar"
+          >
+            Iniciar
+          </Button>
           <p className="forgot-txt-signin">¿Olvidaste tu contraseña?</p>
           <Link to="/signup">
             <div className="button-signup">

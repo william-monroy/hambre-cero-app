@@ -19,3 +19,14 @@ export const VALID_FRUITS = {
   5: "Limon",
   6: "Sandia",
 }
+
+// Models in indexedDB
+export const USER_ID = 1; //only one
+export const USER_MODEL = 'user';
+
+// Login states
+
+export const LOGIN_INIT = 0
+export const LOGIN_POPUP = 1
+export const LOGIN_CLICKED = 2
+export const LOGIN_FAILED_CREDS = 3

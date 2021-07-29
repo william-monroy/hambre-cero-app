@@ -18,6 +18,8 @@
 .env.test.local
 .env.production.local
 
+app_id_config.json
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
