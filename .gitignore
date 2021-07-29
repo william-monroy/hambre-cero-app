@@ -26,3 +26,5 @@ yarn-error.log*
 
 src\js\app_id_config.json
 data/
+
+.env
