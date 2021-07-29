@@ -13,4 +13,7 @@
 - NodeJS
 ## Objetivo
 
-Hambre zero
+Mejorar el acceso a alimentos nutritivos en las comunidades locales que padecen de hambre aguda, lográndose esto a través de:
+- Optimizar el proceso de validación de alimentos.
+- Generar una distribución más rápida y eficaz de los alimentos.
+- Aumentar, mejorar y agilizar las donaciones a las personas en estados críticos de desnutrición 
