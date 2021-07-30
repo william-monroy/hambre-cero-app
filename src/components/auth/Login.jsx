@@ -14,7 +14,7 @@ import {
   onLoginButtonClick,
 } from "../../js/services/auth";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, Container } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import Button from "@material-ui/core/Button";
@@ -89,7 +89,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
+    <Container>
       <div className="navbar">
         <div className="navbar-item">
           <div className="square"></div>
@@ -109,14 +109,14 @@ const Login = () => {
               <p className="form-txt">Ingreso de plataforma</p>
             </Grid>
             <Grid item>
-              <img src="/assets/logo.png" alt="logo" />
+              <img className="logo" src="/assets/logo.png" alt="logo" />
             </Grid>
-            <Grid item>
+            <Grid className="terms__container" item>
               <Link to="/terms">
-                <p className="forgot-txt-signin">Ver terminos de uso</p>
+                <p className="link-policy-terms form-txt">Ver terminos de uso</p>
               </Link>
               <Link to="/policy">
-                <p className="forgot-txt-signin">Ver politica de privacidad</p>
+                <p className="link-policy-terms form-txt">Ver politica de privacidad</p>
               </Link>
             </Grid>
           </Grid>
@@ -131,7 +131,7 @@ const Login = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/home/Home.jsx";
 import Login from "./components/auth/Login";
-import Signup from "./components/auth/Signup";
 import Dashboard from "./components/dashboard/Dashboard";
 import Upload from "./components/upload/Upload";
 import Results from "./components/results/Results";
@@ -23,7 +22,6 @@ function App() {
         <Route path="/policy" component={Policy} />
         <Route path="/terms" component={Terms} />
         <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/results" component={Results} />
         <Route path="/results/:id" component={ResultDetail} />

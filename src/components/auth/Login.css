@@ -6,6 +6,10 @@
     height: 100vh;
 }
 
+.terms__container{
+    margin-top: 20px;
+}
+
 .form-content {
     margin: 0 auto;
 }
@@ -55,7 +59,6 @@ h2 {
     font-size: 30px;
     margin: 0;
     padding: 0;
-    margin-bottom: 30px;
 }
 
 .input-email,
@@ -99,6 +102,10 @@ h2 {
 .forgot-txt-signin{
     font-size: 15px;
 }
+.link-policy-terms {
+    padding: 20px;
+    font-size: 15px;
+}
 
 .button-signup{
     width: 380px;
@@ -118,9 +125,10 @@ h2 {
     font-weight: 500;
 }
 
-img{
-   
+img.logo{
+   padding: 25px;
 }
+
 @media only screen and (max-width: 480px) {
        
     .navbar {
@@ -166,7 +174,6 @@ img{
         font-size: 25px;
         margin: 0;
         padding: 0;
-        margin-bottom: 30px;
     }
     .button-signin{
         width: 280px;

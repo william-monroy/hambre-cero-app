@@ -22,7 +22,7 @@ h1::selection{
     color: #fff;    
 }
 
-p{
+p.paragraph {
     color: #f7f7f7;
     padding: 80px;    
     font-size: 30px;
