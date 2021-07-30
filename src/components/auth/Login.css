@@ -6,6 +6,9 @@
     height: 100vh;
 }
 
+.form-content {
+    margin: 0 auto;
+}
 .navbar {
     display: flex;
     justify-content: space-between;

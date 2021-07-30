@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Grid, Card, Typography } from "@material-ui/core";
-import "./Policy.css"
+import { Container, Grid, Typography } from "@material-ui/core";
+import "./Policy.css";
 
 const terms = [
   {

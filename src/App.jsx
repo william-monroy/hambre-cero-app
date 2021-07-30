@@ -25,7 +25,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/results" exact component={Results} />
+        <Route path="/results" component={Results} />
         <Route path="/results/:id" component={ResultDetail} />
         <Route path="/products" component={Products} />
         <Route path="/categories" component={Categories} />

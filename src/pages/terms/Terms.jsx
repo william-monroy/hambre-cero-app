@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid, Typography } from "@material-ui/core";
-import "./Terms.css"
+import "./Terms.css";
 
 const terms = [
   {

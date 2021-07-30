@@ -3,7 +3,6 @@ import './Signup.css';
 import TextField from '@material-ui/core/TextField';
 import { APP_LOGO } from '../../js/constants'
 import { Link } from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
 
 const currencies = [
     {
