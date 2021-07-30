@@ -19,9 +19,9 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/deletion" component={Deletion} />
-        <Route path="/policy" component={Policy} />
-        <Route path="/terms" component={Terms} />
+        <Route path="/deletion" exact component={Deletion} />
+        <Route path="/policy" exact component={Policy} />
+        <Route path="/terms" exact component={Terms} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/dashboard" component={Dashboard} />

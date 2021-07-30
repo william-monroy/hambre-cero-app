@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 import {
   APP_LOGO,
   LOGIN_INIT,
@@ -15,14 +15,7 @@ import {
 } from "../../js/services/auth";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import IconButton from "@material-ui/core/IconButton";
-import Input from "@material-ui/core/Input";
-import InputLabel from "@material-ui/core/InputLabel";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControl from "@material-ui/core/FormControl";
-import TextField from "@material-ui/core/TextField";
-import Visibility from "@material-ui/icons/Visibility";
-import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import Button from "@material-ui/core/Button";
@@ -57,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Login = () => {
   const classes = useStyles();
-  const history = useHistory()
+  const history = useHistory();
   const loginBtnDisabled = {
     [LOGIN_INIT]: true,
     [LOGIN_FAILED_CREDS]: true,
@@ -83,36 +76,23 @@ const Login = () => {
       setLoginState(s);
     }
     if (loginState === LOGIN_INIT) {
-      checkLogin()
+      checkLogin();
     }
   }, [loginState, auth]);
 
   const onStartButton = async (e) => {
-    if (loginState !== LOGIN_CLICKED){
+    if (loginState !== LOGIN_CLICKED) {
       setLoginState(LOGIN_CLICKED);
-      const {decodeIDToken, userInfo} = await onLoginButtonClick(auth);
+      const { decodeIDToken, userInfo } = await onLoginButtonClick(auth);
       //TODO: request API JWT here using userInfo or decodeIDToken
       //save JWT + userInfo in db
-      console.log({decodeIDToken, userInfo})
+      console.log({ decodeIDToken, userInfo });
       const { user } = await authUser(userInfo);
-      if (user) {
+      if (user) {
         history.push("/dashboard");
       }
       setLoginState(LOGIN_POPUP);
-
     }
-  };
-
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleClickShowPassword = () => {
-    setValues({ ...values, showPassword: !values.showPassword });
-  };
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
   };
 
   return (
@@ -129,59 +109,33 @@ const Login = () => {
         </div>
       </div>
       <div className="form">
-        <p className="form-txt">Inicia Sesión para continuar</p>
+        <p>{errorProviderMsg}</p>
         <div className="form-content">
-          {errorProviderMsg}
-          <div className="input-email">
-            <img src="assets/icon-user.png" alt="icon-user" />
-            <TextField id="standard-basic" label="E-mail" />
-          </div>
-          <div className="input-password">
-            <img src="assets/icon-password.png" alt="icon-password" />
-            <FormControl
-              className={clsx(classes.textField, classes.color)}
-              color="primary"
-            >
-              <InputLabel htmlFor="standard-adornment-password" color="primary">
-                Password
-              </InputLabel>
-              <Input
-                id="standard-adornment-password"
-                type={values.showPassword ? "text" : "password"}
-                value={values.password}
-                onChange={handleChange("password")}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      onMouseDown={handleMouseDownPassword}
-                      color="primary"
-                    >
-                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                    </IconButton>
-                  </InputAdornment>
-                }
-                color="primary"
-              />
-            </FormControl>
-          </div>
+          <Grid container direction="column" alignItems="center" justifyContent="center">
+            <Grid item>
+              <p className="form-txt">Ingreso de plataforma</p>
+            </Grid>
+            <Grid item>
+              <img src="/assets/logo.png" alt="logo" />
+            </Grid>
+            <Grid item>
+              <Link to="/terms">
+                <p className="forgot-txt-signin">Ver terminos de uso</p>
+              </Link>
+              <Link to="/policy">
+                <p className="forgot-txt-signin">Ver politica de privacidad</p>
+              </Link>
+            </Grid>
+          </Grid>
         </div>
         <div className="form-bottom">
           <Button
             className={classes.button}
             onClick={onStartButton}
             disabled={loginBtnDisabled[loginState]}
-            value="Iniciar"
           >
-            Iniciar
+            Entrar
           </Button>
-          <p className="forgot-txt-signin">¿Olvidaste tu contraseña?</p>
-          <Link to="/signup">
-            <div className="button-signup">
-              <p className="button-text-signup">Registrarse</p>
-            </div>
-          </Link>
         </div>
       </div>
     </div>
