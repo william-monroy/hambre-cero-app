@@ -1,6 +1,7 @@
 .card{
     position: relative;
-    transform: scale(0.5);
+    width: 35%;
+    transform: scale(0.6);
 }
 
 .num{
@@ -9,6 +10,7 @@
     left: 0px;
     padding-left: 0;
     padding-right: 0;
+    padding-top:10px;
     position: absolute;
     z-index: 3;
 }
@@ -24,9 +26,9 @@
     align-content: center;
     flex-wrap: nowrap;
     margin-left:0px;
-    margin-top: 200px;
+    margin-top: 150px;
     position: relative;
-    width: 500px;
+    width: 400px;
     z-index: 2;
 }
 
@@ -44,8 +46,47 @@
     height: 250px;
     margin-left: 25px;
     position: absolute;
-    top: 220px;
-    width: 500px;
+    top: 170px;
+    width: 400px;
     z-index: 1;
 }
+@media only screen and (max-width: 1024px){
+    
+}
 
+@media only screen and (max-width: 855px){
+    .card{
+        width:70%;
+        margin-right:100px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    .card-content {
+        align-items: center;
+        background-color: #25C685;
+        border-radius: 50px;
+        display: flex;
+        height: 250px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        margin-left: 0px;
+        margin-top: 150px;
+        position: relative;
+        width: 300px;
+        z-index: 2;
+    }
+
+    .card-shadow {
+        background-color: #286053;
+        border-radius: 50px;
+        height: 250px;
+        margin-left: 25px;
+        position: absolute;
+        top: 170px;
+        width: 300px;
+        z-index: 1;
+    }
+    
+}
