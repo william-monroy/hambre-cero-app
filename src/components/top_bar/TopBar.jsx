@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Avatar, Grid } from "@material-ui/core";
 import Back from "./Back";
 import { APP_LOGO } from '../../js/constants'
 import "./TopBar.css";
+import Dropdown from '../dropdown/Dropdown'
+import './TopBar.css'
 
 const TopBar = ({
-  link="/",
+  link = "/",
   logo = false,
   logoPosition = "left",
   back = false,
@@ -15,10 +17,17 @@ const TopBar = ({
 }) => {
   const componentBack = (<Back link={link} align={backPosition} />);
   const componentLogo = (
-    <img src={ APP_LOGO } alt="dmetr-logo" className="navbar-logo" align={logoPosition} />
+    <img src={APP_LOGO} alt="dmetr-logo" className="navbar-logo" align={logoPosition} />
   );
+  const [open, setOpen] = useState(false);
   const componentAvatar = (
-    <Avatar alt="Luis Cruz" src="/static/images/avatar/3.jpg" align={avatarPosition} />
+    <div  
+      onClick={() =>setOpen(!open)}
+      className="avatar"
+    >
+      <Avatar alt="Luis Cruz" src="/static/images/avatar/3.jpg" align={avatarPosition} className="avatar"/>
+      {open?<Dropdown />:null}
+    </div>
   );
   let items = [];
   if (back) {
@@ -39,7 +48,8 @@ const TopBar = ({
         ? [componentAvatar, ...items]
         : [...items, componentAvatar];
   }
-  const [left="", right=""] = items;
+
+  const [left = "", right = ""] = items;
   return (
     <div>
       <Box my={2}>

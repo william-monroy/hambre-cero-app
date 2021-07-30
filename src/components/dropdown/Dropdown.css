@@ -1,0 +1,43 @@
+:root{
+    --bg: #202a31;
+    --bg-accent: #484a4d;
+    --text-color:#dadce1;
+    --border:.5px solid #354e48;
+    --border-radius: 8px;
+    --speed: 500ms;
+}
+
+.dropdown{
+    position: absolute;
+    top: 70px;
+    width: 200px;
+    transform: translateX(-80%);
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius:var(--border-radius);
+    padding: 1rem;
+    overflow: hidden;
+    z-index: 10;
+    text-decoration: none;
+}
+
+.menu-item{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: background var(--speed);
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.menu-item:hover{
+    background-color: #525357;
+}
+
+.MuiSvgIcon-root{
+    margin-top: 8px;
+    margin-right: 20px;
+}

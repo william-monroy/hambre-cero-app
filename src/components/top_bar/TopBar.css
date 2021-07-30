@@ -1,3 +1,7 @@
 .navbar-logo{
     height: 60px;
 }
+
+.avatar:hover{
+    cursor: hand;
+}
