@@ -12,3 +12,7 @@ h3 {
 strong {
     color: white;
 }
+
+.MuiCard-root{
+    margin-bottom: 10px;
+}

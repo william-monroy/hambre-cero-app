@@ -73,7 +73,8 @@ const Upload = () => {
           <img width={250} src={isImageLoaded} alt="bannanas" />
         </Box>
       )}
-      {isDataLoaded && <CardInfo data={result} />}
+      {isDataLoaded && <CardInfo data={result} className="boton" />}
+
     </Container>
   );
 };

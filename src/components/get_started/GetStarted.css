@@ -58,4 +58,10 @@
 
 .txt-desc{
     color: #25C685;
+    margin-left: 10px;
+    margin-right:10px;  
+} 
+.front h1{
+    font-size: 40px;
+    font-weight: 700;
 }

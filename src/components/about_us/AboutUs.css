@@ -23,25 +23,40 @@ h1::selection{
 }
 
 p{
-    color: #25C685;
-    padding-top: 30px;
-    padding-bottom: 60px;
-    padding-right: 80px;
-    padding-left: 80px;
-    font-size: 25px;
-    font-weight: 400;    
+    color: #f7f7f7;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 300;    
     text-align: justify;
 }
 
 p::selection{
     background-color: #286053;
     color: #fff;
+    font-size: 18px;
+    width:50%;
 }
 
 .images{
     background-color: #286053;
-    width: 900px;
-    height: 550px;
+    width: 50%;
+    height: 5%;
     border-radius: 30px;
     margin: 0 auto;
+}
+
+.images2{
+    background-color: #26a88a;
+    width: 50%;
+    height: 50%;
+    border-radius: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    align-content: center;
+    flex-wrap: nowrap;
 }
