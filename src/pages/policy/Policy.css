@@ -1,0 +1,11 @@
+.policy__title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.policy__description {
+  font-weight: 300;
+  text-align: justify; 
+}

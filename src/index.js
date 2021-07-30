@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
-import {ThemeProvider } from '@material-ui/core/styles'
-import materialUITheme from './components/material_ui/MaterialUI'
-
+import {ThemeProvider } from '@material-ui/core/styles';
+import materialUITheme from './components/material_ui/MaterialUI';
+require('dotenv').config();
 
 ReactDOM.render(
   <React.StrictMode>
