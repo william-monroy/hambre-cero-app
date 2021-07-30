@@ -13,7 +13,6 @@ import {
   initLogin,
   onLoginButtonClick,
 } from "../../js/services/auth";
-import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
@@ -60,13 +59,7 @@ const Login = () => {
   const [loginState, setLoginState] = React.useState(LOGIN_INIT);
   const [errorProviderMsg, setErrorProviderMsg] = React.useState("");
   const [auth] = React.useState(startAuth());
-  const [values, setValues] = React.useState({
-    amount: "",
-    password: "",
-    weight: "",
-    weightRange: "",
-    showPassword: false,
-  });
+
   useEffect(() => {
     async function checkLogin() {
       const s = await initLogin(auth);
