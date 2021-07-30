@@ -30,3 +30,6 @@ export const LOGIN_INIT = 0
 export const LOGIN_POPUP = 1
 export const LOGIN_CLICKED = 2
 export const LOGIN_FAILED_CREDS = 3
+
+
+export const CONTACT_EMAIL = "drigox90rih+facebook@gmail.com"
