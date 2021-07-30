@@ -41,9 +41,14 @@ export const onLoginButtonClick = async (appIdInstance) => {
   }
 };
 
+export const getUserFromDB = async () => {
+  const user = await db[USER_MODEL].get(USER_ID);
+  return user;
+}
+
 //persist user data locally
 export const authUser = async (userInfo) => {
-  let user = await db[USER_MODEL].get(USER_ID);
+  let user = await getUserFromDB();
   let inserted = 0;
   let updated = 0;
   if (!user) { //first time
@@ -56,10 +61,17 @@ export const authUser = async (userInfo) => {
       ...userInfo
     });
   }
-  user = await db[USER_MODEL].get(USER_ID);
+  user = await getUserFromDB();
   return {
     inserted,
     updated,
     user
   };
 };
+
+export const logoutUser = async () => {
+  const result = await db[USER_MODEL].delete(USER_ID)
+  //TODO: Remove JWT
+  return result
+
+}

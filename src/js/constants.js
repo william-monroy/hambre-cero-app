@@ -2,6 +2,8 @@ export const APP_NAME = 'DMETR API'
 
 export const APP_LOGO = '/assets/dmetr-logo.png'
 
+export const DEFAULT_AVATAR = "/static/images/avatar/3.jpg";
+
 export const API_URL = "https://deffa959.us-south.apigw.appdomain.cloud/api";
 
 export const VALID_STATES = {
