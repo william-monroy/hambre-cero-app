@@ -4,6 +4,7 @@
     position: relative;
     z-index: 10;
     width: 100%;
+    
 }
 
 h1{
@@ -26,15 +27,19 @@ h1::selection{
     padding-left: 80px;
     padding-right: 80px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 855px) {
     .cards-container {
         flex-direction: column;
         justify-content: center;
         padding:0;
         margin: 0;
+        width:100%;
     }
 
     .howWorks {
@@ -42,5 +47,52 @@ h1::selection{
         z-index: 20;
         padding-bottom: 80px;
     }
+    h1{
+        color: #3ED79A;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        padding-right: 80px;
+        padding-left: 40px;
+        font-size: 50px;
+        font-weight: 700;
+    }
 
-} 
+@media (max-width: 260px) {
+    h1 {
+        color: #3ED79A;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        padding-right: 80px;
+        padding-left: 40px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .card-content {
+        align-items: center;
+        background-color: #25C685;
+        border-radius: 50px;
+        display: flex;
+        height: 250px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        margin-left: 0px;
+        margin-top: 150px;
+        position: relative;
+        width: 300px;
+        z-index: 2;
+    }
+
+    .card-shadow {
+        background-color: #286053;
+        border-radius: 50px;
+        height: 250px;
+        margin-left: 25px;
+        position: absolute;
+        top: 170px;
+        width: 300px;
+        z-index: 1;
+    }
+    
+}}

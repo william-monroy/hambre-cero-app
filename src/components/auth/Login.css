@@ -34,6 +34,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin:10px ;
 }
 
 .form {
@@ -115,6 +116,10 @@ h2 {
     color: #3DD598;
     font-size: 20px;
     font-weight: 500;
+}
+
+img{
+   
 }
 @media only screen and (max-width: 480px) {
        
