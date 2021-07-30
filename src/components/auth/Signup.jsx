@@ -25,21 +25,13 @@ const Signup = () => {
     const handleChange = (event) => {
         setCurrency(event.target.value);
     };
-    const useStyles = makeStyles((theme) => ({
-        root: {
-          '& > *': {
-            margin: theme.spacing(1),
-            width: '400px',
-          },
-        },
-      }));
-
+    
     return (
         <div className="signup">
             <div className="navbar">
                 <h2 className="reg">REGISTRO</h2>
                 <Link to="/">
-                    <img src={ APP_LOGO } alt="logo-dmetr" className="navbar-logo" />
+                    <img src={APP_LOGO} alt="logo-dmetr" className="navbar-logo" />
                 </Link>
             </div>
             <p>Complete el siguiente formulario para registrarse en el sistema</p>
@@ -86,7 +78,7 @@ const Signup = () => {
             </div>
             <Link to="/signup">
                 <div className="button-signup2">
-                <p className="button-text-signup">Crear cuenta</p>
+                    <p className="button-text-signup">Crear cuenta</p>
                 </div>
             </Link>
         </div>
