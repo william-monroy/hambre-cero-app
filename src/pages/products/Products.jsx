@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Card, Typography } from "@material-ui/core";
-import TopBar from "../top_bar/TopBar";
-import Table from "../table/Table";
+import TopBar from "../../components/top_bar/TopBar";
+import Table from "../../components/table/Table";
 import "./Products.css"
 
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Container, Grid, Box } from "@material-ui/core";
-import TopBar from "../top_bar/TopBar";
+import TopBar from "../../components/top_bar/TopBar";
 import CardInfo from "./CardInfo";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import Product from "../../js/services/Product";

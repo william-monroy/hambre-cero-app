@@ -1,8 +1,8 @@
 import React from 'react'
-import Hero from '../hero/Hero'
-import AboutUs from '../about_us/AboutUs'
-import HowWorks from '../how_works/HowWorks'
-import GetStarted from '../get_started/GetStarted'
+import Hero from '../../components/hero/Hero'
+import AboutUs from '../../components/about_us/AboutUs'
+import HowWorks from '../../components/how_works/HowWorks'
+import GetStarted from '../../components/get_started/GetStarted'
 import './Home.css'
 
 const Home = () => {

@@ -54,7 +54,6 @@ export default class Product {
     // TODO: change input to file
     const dummy = this.randomData();
     const result = await this.api.makeRequest("/upload-product", dummy);
-    debugger; //eslint-disable-line
     return {
       data: {
         ...result.data,

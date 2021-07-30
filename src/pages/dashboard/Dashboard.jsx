@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid } from "@material-ui/core";
 import BoxContainer from "./shortcut/BoxContainer";
-import TryButton from "../button/Button";
-import TopBar from "../top_bar/TopBar";
+import TryButton from "../../components/button/Button";
+import TopBar from "../../components/top_bar/TopBar";
 import "./Dashboard.css";
 const Dashboard = () => {
   return (

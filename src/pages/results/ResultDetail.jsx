@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, Box } from "@material-ui/core";
-import TopBar from "../top_bar/TopBar";
+import TopBar from "./../../components/top_bar/TopBar";
 import { VALID_STATES } from "../../js/constants";
 import Product from "../../js/services/Product";
 import CardInfo from "../upload/CardInfo";
