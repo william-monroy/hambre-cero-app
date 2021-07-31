@@ -49,8 +49,8 @@ const Policy = () => {
   return (
     <Container maxWidth="md">
       <Grid container>
-        {terms.map((t) => (
-          <Grid item>
+        {terms.map((t, i) => (
+          <Grid item key={i}>
             <br />
             <Typography
               className="policy__title"
