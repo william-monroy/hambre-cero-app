@@ -70,8 +70,12 @@ const TopBar = ({
           justifyContent="space-between"
           alignItems="center"
         >
-          {left}
-          {right}
+          <Grid item sm={2}> 
+            {left}
+          </Grid>
+          <Grid item sm={1}> 
+            {right}
+          </Grid>
         </Grid>
       </Box>
     </div>

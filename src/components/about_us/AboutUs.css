@@ -98,10 +98,10 @@ p::selection{
     
 }
 @media screen and (max-width: 530px){
-    p{
+    p.paragraph{
         color: #f7f7f7;
         padding:30px;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 200;    
         text-align: justify;
     }

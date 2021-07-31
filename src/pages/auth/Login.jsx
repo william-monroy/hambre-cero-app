@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import {
-  APP_LOGO,
   LOGIN_INIT,
   LOGIN_FAILED_CREDS,
   LOGIN_POPUP,
@@ -44,6 +43,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+
+    '@media(maxWidth: 320px)' : {
+      width: '100% !important'
+    }
   },
 }));
 
@@ -89,7 +92,7 @@ const Login = () => {
   };
 
   return (
-    <Container>
+    <Container className="cont">
       <div className="navbar">
         <div className="navbar-item">
           <div className="square"></div>
@@ -97,7 +100,7 @@ const Login = () => {
         </div>
         <div className="navbar-item">
           <Link to="/">
-            <img src={APP_LOGO} alt="logo-dmetr" className="navbar-logo" />
+            <img src="/assets/logo.png" alt="logo" className="navbar-logo" />
           </Link>
         </div>
       </div>
