@@ -19,11 +19,11 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/deletion" component={Deletion} />
-        <Route path="/policy" component={Policy} />
-        <Route path="/terms" component={Terms} />
+        <Route path="/policy" exact component={Policy} />
+        <Route path="/terms" exact component={Terms} />
         <Route path="/login" component={Login} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/results" component={Results} />
+        <Route path="/results" exact component={Results} />
         <Route path="/results/:id" component={ResultDetail} />
         <Route path="/products" component={Products} />
         <Route path="/categories" component={Categories} />
