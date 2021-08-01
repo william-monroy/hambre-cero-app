@@ -17,13 +17,16 @@ const TopBar = ({
   avatarPosition = "right",
 }) => {
 
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({
+    given_name: '',
+    picture: ''
+  });
   useEffect(() => {
-    async function getUser(){
-        getUserFromDB().then((u) => setUser(u));
+    async function getUser() {
+      getUserFromDB().then((u) => setUser(u));
     }
-    if(!user){
-        getUser();
+    if (!user.given_name) {
+      getUser();
     }
   }, [user]);
   const componentBack = (<Back link={link} align={backPosition} />);
@@ -32,12 +35,16 @@ const TopBar = ({
   );
   const [open, setOpen] = useState(false);
   const componentAvatar = (
-    <div  
-      onClick={() =>setOpen(!open)}
+    <div
+      onClick={() => setOpen(!open)}
       className="avatar"
     >
-      <Avatar alt="Luis Cruz" src={ user?.picture ? user.picture : DEFAULT_AVATAR} align={avatarPosition} className="avatar"/>
-      {open?<Dropdown />:null}
+      {user?.picture ?
+        <Avatar src={user.picture} align={avatarPosition} className="avatar" />
+        :
+        <Avatar src={user.picture} align={avatarPosition} className="avatar">{user.given_name[0]}</Avatar>
+      }
+      {open ? <Dropdown /> : null}
     </div>
   );
   let items = [];
@@ -70,10 +77,10 @@ const TopBar = ({
           justifyContent="space-between"
           alignItems="center"
         >
-          <Grid item sm={2}> 
+          <Grid item sm={2}>
             {left}
           </Grid>
-          <Grid item sm={1}> 
+          <Grid item sm={1}>
             {right}
           </Grid>
         </Grid>
